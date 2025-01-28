@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Move SparkMD5 to head section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
+</head>
+<body>
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="switch">
+            <span class="sun"><i class="fa-thin fa-sun"></i></span>
+            <span class="moon">🌜</span>
+        </label>
+    </div>
+    <div class="container">
+        <h1>Hashing Calculator</h1>
+        <div class="input-group">
+            <input type="text" id="inputString" placeholder="Enter text to hash...">
+        </div>
+        <button id="hashButton">Generate Hashes</button>
+
+        <div id="output">
+            <div class="hash-result">
+                <span class="hash-label">MD5</span>
+                <div id="md5Output" class="hash-value"></div>
+            </div>
+            <div class="hash-result">
+                <span class="hash-label">SHA-1</span>
+                <div id="sha1Output" class="hash-value"></div>
+            </div>
+            <div class="hash-result">
+                <span class="hash-label">SHA-256</span>
+                <div id="sha256Output" class="hash-value"></div>
+            </div>
+            <div class="hash-result">
+                <span class="hash-label">SHA-512</span>
+                <div id="sha512Output" class="hash-value"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Add defer attribute to ensure proper loading order -->
+    <script src="theme.js" defer></script>
+    <script src="hash_calculator.js" defer></script>
+</body>
+</html>
